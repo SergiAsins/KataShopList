@@ -39,6 +39,18 @@ public class SupermarketTest {
         cart.addProduct(foodProductToAdd);
         assertEquals("Sugar", cart.getCartList().getFirst().getName());
     }
+
+    @Test
+    void TestCartCannotRepeatProductName(){
+        Cart cart = new Cart();
+        Product foodProductToAdd1 = new FoodProduct("Chocolate", 1, 0);
+        Product foodProductToAdd2 = new FoodProduct("Chocolate", 1, 10);
+        cart.addProduct(foodProductToAdd1);
+        cart.addProduct(foodProductToAdd2);
+        assertEquals(1, cart.getCartList().size());
+    }
+
+    //Podemos consultar la lista de productos añadidos al carrito
 }
 //arrange
 //act

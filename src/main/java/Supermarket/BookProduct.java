@@ -1,9 +1,8 @@
 package Supermarket;
 
 public class BookProduct extends Product {
-    private String author;
-    private String description;
-    private float discount;
+    private final String author;
+    private final String description;
 
     public BookProduct(String name, double price, float discount, String author, String description) {
         super(name, price, discount);
